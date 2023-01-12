@@ -1,38 +1,137 @@
 .App {
-  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#light {
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#dark {
+  background-color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* form related css */
+
+.form-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100vw;
+  height: 100vh;
+}
+
+.form-title {
+  margin: 0;
+  padding: .5rem;
+  text-align: center;
+  font-size: 22px;
+}
+
+#dark .form-title {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-content {
+  width: 35%;
+  margin: 0 auto;
+  background-color: rgb(235, 243, 243);
+  border-radius: 6px;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#dark .form-content{
+  background-color: rgb(55, 55, 55);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.form-submit {
+  width: 30%;
+  padding: .5rem;
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 550;
+  border: none;
+  border-radius: 3px;
+  margin-top: .4rem;
+  cursor: pointer;
+}
+
+#dark .form-submit {
+  background-color: white;
+  color: black;
+}
+
+.btn-block {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* form related css over here */
+
+
+/* input related css */
+.form-inputs {
+  width: 100%;
+}
+
+.form-label {
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+}
+
+#dark .form-label {
+  color: white;
+}
+
+.form-input {
+  width: 100%;
+  height: 2.3rem;
+  outline: none;
+  border: 1.4px solid rgb(217, 214, 214);
+  border-radius: 3px;
+  margin-top: .3rem;
+  font-size: 16px;
+}
+
+#dark .form-input {
+  border: 1.4px solid rgb(129, 127, 127);
+}
+
+.form-error {
+  font-size: 14px;
+  color: red;
+  font-weight: 400;
+  margin: 0;
+}
+
+#dark .form-error {
+  color: aquamarine;
+}
+
+/* input related css over here */
+
+
+
+@media only screen and (max-width: 600px) {
+  .form-content {
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form-submit {
+    width: 50%;
   }
 }
